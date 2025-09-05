@@ -6,11 +6,11 @@ import subprocess
 import signal
 
 from .enums import DoF, Command, ControlMode
-import rose_tvmc_msg.msg as msg
+import pecka_tvmc_msg.msg as msg
 
 
-PREFIX = "/rose_tvmc/control"
-PACKAGE = "rose_tvmc"
+PREFIX = "/pecka_tvmc/control"
+PACKAGE = "pecka_tvmc"
 TVMC_EXECUTABLE = "tvmc"
 PWMC_EXECUTABLE = "pwmc"
 

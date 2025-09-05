@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-package_name = "rose_tvmc_msg"
+package_name = "pecka_tvmc_msg"
 
 setup(
     name=package_name,
@@ -9,8 +9,8 @@ setup(
     package_dir={"": "src"},
     install_requires=["setuptools"],
     zip_safe=True,
-    maintainer="Rose",
-    maintainer_email="cs21b1041@iiitdm.ac.in",
+    maintainer="Pecka",
+    maintainer_email="auv.society@iiitdm.ac.in",
     description="TVMC messages and interfaces in ROS 2",
     license="MIT",
     tests_require=["pytest"],

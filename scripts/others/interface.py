@@ -176,7 +176,7 @@ def data():
     def set_diag(name, data):
         diagnostics[name] = data
 
-    m.create_subscription(Float32MultiArray, "/rose_tvmc/thrust",
+    m.create_subscription(Float32MultiArray, "/pecka_tvmc/thrust",
                           lambda x: set_diag("Thrust", list(x.data)), 10)
 
     m.create_subscription(Int32MultiArray, "/control/pwm",

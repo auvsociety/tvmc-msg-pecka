@@ -6,7 +6,7 @@ from sensor_msgs.msg import CompressedImage
 from std_msgs.msg import Float32MultiArray
 from std_msgs.msg import Float32, Vector3
 from tvmc import MotionController, DoF, ControlMode
-from rose_tvmc_msg.msg import LEDControl
+from pecka_tvmc_msg.msg import LEDControl
 
 
 

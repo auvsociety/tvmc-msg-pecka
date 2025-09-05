@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import rospy
-from rose_tvmc_msg.msg import LEDControl
+from pecka_tvmc_msg.msg import LEDControl
 from std_msgs.msg import Int16
 import time
 

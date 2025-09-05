@@ -1,4 +1,4 @@
-import rose_tvmc_msg.msg as msg
+import pecka_tvmc_msg.msg as msg
 from enum import IntEnum
 
 

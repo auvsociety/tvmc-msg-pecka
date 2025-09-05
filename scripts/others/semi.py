@@ -8,7 +8,7 @@ from geometry_msgs.msg import Vector3
 from statemachine import StateMachine, State
 
 from tvmc import MotionController, DoF, ControlMode
-from rose_tvmc_msg.msg import LEDControl
+from pecka_tvmc_msg.msg import LEDControl
 
 
 # globals
