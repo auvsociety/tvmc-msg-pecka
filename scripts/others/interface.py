@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-# ROS 2 port of the original ROS 1 interface.py with same functionality.
 
 from sshkeyboard import listen_keyboard, stop_listening
-from tvmc import MotionController, DoF, ControlMode  # MotionController is ROS 2-based
+from tvmc import MotionController, DoF, ControlMode
 import blessings
 import rclpy
 from time import sleep

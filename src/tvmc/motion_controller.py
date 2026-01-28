@@ -35,9 +35,6 @@ class MotionController(Node):
         self._tvmc_process = None
         self._pwmc_process = None
 
-        # thread for spinning (like rospy.spin in background)
-        self._spinner = Thread(target=rclpy.spin, args=(self,), daemon=True)
-        self._spinner.start()
 
     # ----------------- Node launching -----------------
     def start_nodes(self):
@@ -82,7 +79,7 @@ class MotionController(Node):
     def set_thrust(self, dof: DoF, thrust: float) -> None:
         if self.controlModes[dof] == ControlMode.CLOSED_LOOP:
             raise AssertionError(f"Cannot set thrust for DoF {dof} in closed loop mode.")
-
+        
         t = msg.Thrust()
         t.dof = dof.value
         t.thrust = thrust
