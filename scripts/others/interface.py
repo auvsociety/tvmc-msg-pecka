@@ -7,7 +7,7 @@ from rclpy.node import Node
 from time import sleep
 from threading import Thread
 from std_msgs.msg import Float32MultiArray, Float32, Int32MultiArray
-from geometry_msgs.msg import Vector3
+from geometry_msgs.msg import Vector3, Vector3Stamped
 
 rclpy.init()
 
@@ -235,16 +235,16 @@ def data(node):
     )
 
     def orientation(x):
-        m.set_current_point(DoF.ROLL, x.x)
-        m.set_current_point(DoF.PITCH, x.y)
-        m.set_current_point(DoF.YAW, x.z)
-        set_diag("Roll", x.x)
-        set_diag("Pitch", x.y)
-        set_diag("Yaw", x.z)
+        m.set_current_point(DoF.ROLL, x.vector.x)
+        m.set_current_point(DoF.PITCH, x.vector.y)
+        m.set_current_point(DoF.YAW, x.vector.z)
+        set_diag("Roll", x.vector.x)
+        set_diag("Pitch", x.vector.y)
+        set_diag("Yaw", x.vector.z)
         
     node.create_subscription(
-        Vector3, 
-        f"/{DATA_SOURCE}/orientation", 
+        Vector3Stamped, 
+        "/filter/euler", 
         orientation, 
         10
     )
