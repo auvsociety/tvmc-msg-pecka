@@ -34,10 +34,10 @@ ament_python_install_package(tvmc PACKAGE_DIR src/tvmc)
 ament_export_dependencies(rosidl_default_runtime)
 ament_export_dependencies(std_msgs geometry_msgs)
 
+file(GLOB ALL_SCRIPTS "scripts/others/*.py")
 install(PROGRAMS
-  scripts/others/interface.py
+  ${ALL_SCRIPTS}
   DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_package()
-
